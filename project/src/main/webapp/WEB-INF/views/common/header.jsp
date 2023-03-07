@@ -20,7 +20,7 @@
                 <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="javascript:onQna();">1:1 문의</a></li>
                 <li class="nav-item"><a class="nav-link" href="javascript:onResign();">서비스 해지</a></li>
-                <li class="nav-item"><a id="a-login" class="nav-link" href="javascript:onLogin();">로그인</a></li>
+                <li class="nav-item"><a id="login" class="nav-link" href="login">로그인</a></li>
             </ul>
         </div>
     </div>

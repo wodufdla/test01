@@ -39,5 +39,11 @@ public class HomeController {
 	@RequestMapping("/fortune")
 	public String fortune(Model model) {		
 		return "fortune";
-	}	
+	}
+	
+	@RequestMapping("/login")
+	public String login(Model model) {
+		return "login";
+	}
+	
 }
