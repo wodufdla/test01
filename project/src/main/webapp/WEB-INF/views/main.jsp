@@ -11,7 +11,7 @@
 <div class="container">
 	<jsp:include page="common/header.jsp" />
 </div>
-<p>메인1111111111</p>
+<p>메인</p>
 	<jsp:include page="common/footer.jsp" />
 </body>
 </html>
