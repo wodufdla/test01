@@ -9,9 +9,9 @@
 </head>
 <body>
 <div class="container">
-	<jsp:include page="common/header.jsp" />
+   <jsp:include page="common/header.jsp" />
 </div>
-<a class="fortune" href="fortune">운세</a>
-	<jsp:include page="common/footer.jsp" />
+<a class="fortune" href="fortune">운세876876587</a>
+   <jsp:include page="common/footer.jsp" />
 </body>
 </html>
