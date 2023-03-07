@@ -36,4 +36,8 @@ public class HomeController {
 		return "main";
 	}
 	
+	@RequestMapping("/fortune")
+	public String fortune(Model model) {		
+		return "fortune";
+	}	
 }
