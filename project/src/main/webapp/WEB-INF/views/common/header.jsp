@@ -21,7 +21,7 @@
                 <li class="nav-item"><a class="nav-link" href="javascript:onQna();">1:1 문의</a></li>
                 <li class="nav-item"><a class="nav-link" href="javascript:onResign();">서비스 해지</a></li>
                 <li class="nav-item">
-                <a id="login" class="nav-link" style="width: 10%; float: right; cursor : pointer;" onclick="window.open('login','login','width=500,height=500,location=no,status=no,scrollbars=yes,left=700,top=200');">로그인</a>
+                <a id="login" class="nav-link" style="width: 10%; float: right; cursor : pointer;" onclick="window.open('login','login','width=585,height=400,location=no,status=no,scrollbars=yes,left=700,top=200');">로그인</a>
             </ul>
         </div>
     </div>
