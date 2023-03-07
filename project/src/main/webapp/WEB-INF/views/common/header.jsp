@@ -1,8 +1,27 @@
 <%@ page contentType="text/html; charset=UTF-8" %>
 
-<div class="sep">
-	<a class="" href="#">
-		<img src="/resources/img/sep11.png">
-	</a>
-	<a class="login" href="#">로그인</a>	
-</div>
+<link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon&amp;subset=korean&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+KR:100,200,300,400,500,600,700&amp;subset=korean&amp;display=swap">
+<link rel="stylesheet" href="/resources/css/style.css">
+
+<nav class="navbar navbar-light navbar-expand-md">
+   	<div class="container-fluid">
+   		<a class="navbar-brand" href="#">
+   			<img src="/resources/img/sep11.png" style="height: 60px;">
+   		</a>
+        <a class="nav-link-command" href="javascript:onQna();" style="border: solid 1px #192a5e;color: #192a5e;">문의</a>
+        <a class="nav-link-command" href="javascript:onResign();" style="border: solid 1px #bc401e;color: #bc401e;">해지</a>
+        <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol"><span class="visually-hidden"></span><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol">
+            <ul class="navbar-nav" style="width: 100%;">
+                <li class="nav-item"><a class="nav-link" href="#service">서비스 소개</a></li>
+                <li class="nav-item"><a class="nav-link" href="#join">서비스 가입</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:onQna();">1:1 문의</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:onResign();">서비스 해지</a></li>
+                <li class="nav-item"><a id="a-login" class="nav-link" href="javascript:onLogin();">로그인</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
