@@ -11,7 +11,7 @@
 </head>
 <body>
    <jsp:include page="common/header.jsp" />
-	<a class="fortune" href="fortune">운세</a>
+	<a class="fortune" href="fortune">test</a>
    <jsp:include page="common/footer.jsp" />
 </body>
 </html>
