@@ -14,7 +14,6 @@ import lombok.ToString;
 public class userVO {
 
 	// 회원관리
-	private String user_id;
 	private String password;
 	private String email;
 	private String phone;
