@@ -3,9 +3,13 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-  <typeAliases>
-        
-  </typeAliases>
+	<properties>
+		<property name="user" value="user" />
+		<property name="phone" value="phone" />
+		<property name="password" value="password" />
+		<property name="email" value="email" />
+		<property name="joinDate" value="join_date" />
+		<property name="withdrawal" value="withdrawal" />
+	</properties>
 
 </configuration>

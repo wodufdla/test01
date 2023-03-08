@@ -18,7 +18,7 @@ public class userVO {
 	private String password;
 	private String email;
 	private String phone;
-	private Date join_date;
+	private Date joinDate;
 	private boolean withdrawal;
 		
 	
