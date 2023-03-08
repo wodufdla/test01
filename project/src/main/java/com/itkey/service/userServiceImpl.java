@@ -18,7 +18,7 @@ public class userServiceImpl implements userService {
 	private userDAO userDAO;
 
 	@Override
-	public List<userVO> read() {
+	public List<userVO> readAll() {
 		log.info("read() 호출");
 		return userDAO.selectAll();
 	}
@@ -39,6 +39,12 @@ public class userServiceImpl implements userService {
 	public int delete(userVO vo) {
 		log.info("delete() 호출 : vo = " + vo.toString());
 		return userDAO.delete(vo);
+	}
+
+	@Override
+	public userVO read_by_phone(String phone) {
+		log.info("read_by_phone() 호출 : phone = " + phone);
+		return userDAO.select_by_phone(phone);
 	}
 	
 	

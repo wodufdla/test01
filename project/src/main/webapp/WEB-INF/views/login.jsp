@@ -16,22 +16,40 @@
 	<a href="javascript:close();" style="position: absolute;right: 0;">
 		<img src="/resources/img/popup_close.png" style="padding: 14px;width: 50px;">
 	</a>
-	<span style="background-color: #1a374f;font-weight: bold;font-size: 20px;line-height: 50px;text-align: center;width: 100%;display: block;height: 50px;color: #fff;box-shadow: 0px 5px 10px 0px #aaaa;">전화번호 간편 로그인</span>
-	<div style="width: 90%;margin: auto;padding: 20px 0;font-size: 13px;">
-      <ul style="padding: 0;display: flex;">
-          <li style="width: 40%;max-width: 100px;"><span class="normal-font" style="display: block;padding: 8px;">전화번호</span></li>
-          <li style="display: flex;width: 100%;"><input type="tel" id="input-phone" placeholder="'-' 제외하고 번호만 입력" onkeypress="return paternNumber(event)" maxlength="11" oninput="onInput(this)" onkeyup="if(window.event.keyCode==13){request();}" style="width: 100%;padding: 5px;"><a id="a-request" href="javascript:request();" style="display: block;background-color: #b5b9bc;color: #fff;width: 100px;font-size: 12px;line-height: 40px;text-align: center;">인증요청</a></li>
-      </ul>
-      <ul style="padding: 0;display: flex;">
-          <li style="width: 40%;max-width: 100px;"><span class="normal-font" style="display: block;padding: 8px;">인증번호</span></li>
-          <li style="width: 100%;display: flex;"><input type="tel" id="input-certificate" placeholder="인증번호 4자리 입력" onkeypress="return paternNumber(event)" maxlength="4" oninput="onInput(this)" onkeyup="if(window.event.keyCode==13){confirm();}"style="width: 100%;padding: 5px;"><a id="a-confirm" href="javascript:confirm();" style="display: block;background-color: #b5b9bc;color: #fff;width: 100px;font-size: 12px;line-height: 40px;text-align: center;">인증확인</a></li>
-      </ul>
-	</div>
-	<a href="/login_email" style="color: #bc401e;margin: auto;display: table;"><strong><span style="text-decoration: underline;">통합 이메일 가입회원 로그인</span></strong></a>
-	<span style="margin-top: 30px;border-top: solid 1px #1a374f;width: 100%;display: block;text-align: center;padding: 30px 10px;font-size: 10px;">이메일로 가입하신 회원님은&nbsp;<strong>'통합 이메일 가입회원 로그인'</strong>을 통해 인증번호 없이 로그인 가능합니다.<br><br>서비스해지와 문의는 홈페이지 상단 메뉴를 통해 바로 가능합니다.</span>
+	<span style="background-color: #1a374f;font-weight: bold;font-size: 20px;line-height: 50px;text-align: center;width: 100%;display: block;height: 50px;color: #fff;box-shadow: 0px 5px 10px 0px #aaaa;">로그인</span>
+	<form action="login" method="post">
+		<div style="width: 90%;margin: auto;padding: 20px 0;font-size: 13px;">
+	      <ul style="padding: 0;display: flex;">
+	          <li style="width: 40%;max-width: 100px;">
+	          	<span class="normal-font" style="display: block;padding: 8px;">Phone</span>
+	          </li>
+	          <li style="display: flex;width: 100%;">
+	          	<input type="text" id="phone" name="phone" placeholder="'-' 제외하고 번호만 입력" maxlength="11" style="width: 100%; padding: 5px;">
+	          </li>
+	      </ul>
+	      <ul style="padding: 0;display: flex;">
+	          <li style="width: 40%;max-width: 100px;">
+	          	<span class="normal-font" style="display: block;padding: 8px;">Password</span>
+	          </li>
+	          <li style="width: 100%;display: flex;">
+	          	<input type="password" id="password" name="password" placeholder="비밀번호 입력" maxlength="20" style="width: 100%; padding: 5px;">
+	          </li>
+	      </ul>
+		</div>
+	</form>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="/assets/js/bootstrap.min.js"></script>
 	<script src="/assets/js/script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var result = $('#alert').val();
+			if(result == 'success'){
+				alert('로그인 성공');
+			} else if(result == 'fail') {
+				alert('핸드폰번호와 비밀번호를 확인해주세요.');
+			}
+		});	
+	</script>
 </body>
 </html>

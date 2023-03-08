@@ -41,4 +41,10 @@ public class userDAOImpl implements userDAO {
 		log.info("delete() 호출");
 		return sqlSession.update(NAMESPACE + ".delete", vo);
 	}
+
+	@Override
+	public userVO select_by_phone(String phone) {
+		log.info("select_by_phone() 호출");
+		return sqlSession.selectOne(NAMESPACE + ".select_by_phone", phone);
+	}
 }

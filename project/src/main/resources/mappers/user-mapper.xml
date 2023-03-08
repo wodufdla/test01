@@ -25,4 +25,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		set ${withdrawal} = #{withdrawal}
 		where ${phone} = #{phone}
 	</update>
+	
+	<select id="select_by_phone" resultType="String">
+		select * from ${user}
+		where ${phone} = #{phone}
+	</select>
+	
 </mapper>
