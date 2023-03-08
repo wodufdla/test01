@@ -14,7 +14,7 @@ import lombok.ToString;
 public class questionVO {
 
 	// 1:1문의
-//	private String user_id;
+	private String phone;
 	private String question;
 	private Date question_time;
 	private boolean answer_yn;

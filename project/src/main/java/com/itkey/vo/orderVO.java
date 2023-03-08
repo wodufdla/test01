@@ -15,7 +15,7 @@ public class orderVO {
 
 	//주문관리
 	private int order_no;
-//  private String phone;
+	private String phone;
 	private String order_cont;
 	private String billing_key;
 	private String price;
