@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class OrderDAOImple implements OrderDAO {
-	private static final Logger log = LoggerFactory.getLogger(OrderDAOImple.class);
+public class orderDAOImple implements orderDAO {
+	private static final Logger log = LoggerFactory.getLogger(orderDAOImple.class);
 	private static final String NAMESPACE = "OrderMapper";
 	
 	@Autowired

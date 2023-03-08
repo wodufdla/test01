@@ -5,14 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.itkey.dao.OrderDAO;
+import com.itkey.dao.orderDAO;
 
 @Service
-public class OrderServiceImple implements OrderService {
-	private static final Logger log = LoggerFactory.getLogger(OrderServiceImple.class);
+public class orderServiceImple implements orderService {
+	private static final Logger log = LoggerFactory.getLogger(orderServiceImple.class);
 	
 	@Autowired
-	private OrderDAO orderDAO;
+	private orderDAO orderDAO;
 	
 	
 }

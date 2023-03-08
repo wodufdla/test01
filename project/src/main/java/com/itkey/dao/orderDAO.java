@@ -1,5 +1,5 @@
 package com.itkey.dao;
 
-public interface OrderDAO {
+public interface orderDAO {
 	
 }
