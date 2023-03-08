@@ -11,6 +11,6 @@
 	    <a href="javascript:popup('/terms/privacy.html', 414, 700);">개인정보 취급방침</a></div>
 	<div class="container" style="display: flex;padding: 20px;">
 		<img src="/resources/img/sep11.png">
-	    <p style="color: #fff;">상호명 : (주)벨류모어 | 대표 : 반승재 | 통신판매업신고번호 : 제2022-경기부천-0990호<br>주소 : 경기도 부천시 부광로 220 301호 | 사업자등록번호 : 483-88-00071<br>E-mail : vmore.cs+fortune@gmail.com | 대표번호 : 070-4506-3339</p>
+	    <p style="color: #fff;">상호명 : (주)아이티키 | 대표 : 김성수 | 통신판매업신고번호 : 제2023-서울-0001호<br>주소 : 서울시 금천구 벚꽃로 278, 1406호 (SJ테크노빌) | 사업자등록번호 : 000-00-00000<br>E-mail : itkey@itkey.co.kr | 대표번호 : 02-6959-9966</p>
 	</div>
 </footer>

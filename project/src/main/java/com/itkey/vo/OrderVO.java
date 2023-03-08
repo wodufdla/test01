@@ -11,7 +11,7 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @ToString
-public class orderVO {
+public class OrderVO {
 
 	//주문관리
 	private int order_no;
