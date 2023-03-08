@@ -46,4 +46,14 @@ public class HomeController {
 		return "login";
 	}
 	
+	@RequestMapping("/main")
+	public String main(Model model) {
+		return "main";
+	}
+	
+	@RequestMapping("/order")
+	public String order(Model model) {
+		return "order";
+	}
+	
 }
