@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class serviceDAOImple implements serviceDAO {
-	private static final Logger log = LoggerFactory.getLogger(serviceDAOImple.class);
+public class serviceDAOImpl implements serviceDAO {
+	private static final Logger log = LoggerFactory.getLogger(serviceDAOImpl.class);
 	private static final String NAMESPACE = "ServiceMapper";
 	
 	@Autowired

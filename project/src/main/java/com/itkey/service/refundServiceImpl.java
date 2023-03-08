@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.itkey.dao.refundDAO;
 
 @Service
-public class refundServiceImple implements refundService {
-	private static final Logger log = LoggerFactory.getLogger(refundServiceImple.class);
+public class refundServiceImpl implements refundService {
+	private static final Logger log = LoggerFactory.getLogger(refundServiceImpl.class);
 	
 	@Autowired
 	private refundDAO refundDAO;

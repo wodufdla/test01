@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.itkey.dao.questionDAO;
 
 @Service
-public class questionServiceImple implements questionService {
-	private static final Logger log = LoggerFactory.getLogger(questionServiceImple.class);
+public class questionServiceImpl implements questionService {
+	private static final Logger log = LoggerFactory.getLogger(questionServiceImpl.class);
 	
 	@Autowired
 	private questionDAO questionDAO;

@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class questionDAOImple implements questionDAO {
-	private static final Logger log = LoggerFactory.getLogger(questionDAOImple.class);
+public class questionDAOImpl implements questionDAO {
+	private static final Logger log = LoggerFactory.getLogger(questionDAOImpl.class);
 	private static final String NAMESPACE = "QuestionMapper";
 	
 	@Autowired

@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class refundDAOImple implements refundDAO {
-	private static final Logger log = LoggerFactory.getLogger(refundDAOImple.class);
+public class refundDAOImpl implements refundDAO {
+	private static final Logger log = LoggerFactory.getLogger(refundDAOImpl.class);
 	private static final String NAMESPACE = "RefundMapper";
 	
 	@Autowired

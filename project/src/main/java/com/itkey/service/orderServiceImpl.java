@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import com.itkey.dao.orderDAO;
 
 @Service
-public class orderServiceImple implements orderService {
-	private static final Logger log = LoggerFactory.getLogger(orderServiceImple.class);
+public class orderServiceImpl implements orderService {
+	private static final Logger log = LoggerFactory.getLogger(orderServiceImpl.class);
 	
 	@Autowired
 	private orderDAO orderDAO;
