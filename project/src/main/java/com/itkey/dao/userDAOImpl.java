@@ -13,10 +13,11 @@ import com.itkey.vo.userVO;
 public class userDAOImpl implements userDAO {
 	private static final Logger log = LoggerFactory.getLogger(userDAOImpl.class);
 	private static final String NAMESPACE = "UserMapper";
-	
+	//sql불러오기
 	@Autowired
 	private SqlSessionTemplate sqlSession;
 
+	//폰번호 체크
 	@Override
 	public userVO loginPhCheck(String loginPH1) {
 		// TODO Auto-generated method stub
@@ -24,7 +25,8 @@ public class userDAOImpl implements userDAO {
 		
 		return uv;
 	}
-
+	
+	//비밀번호 체크
 	@Override
 	public userVO loginPwCheck(userVO loginPw) {
 		// TODO Auto-generated method stub

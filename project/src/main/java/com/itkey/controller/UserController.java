@@ -32,6 +32,7 @@ public class UserController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	
+	//서비스
 	@Autowired
 	userService us;
 	
@@ -41,11 +42,13 @@ public class UserController {
 	@ResponseBody
 	@PostMapping("/loginCheck")
 	public int loginCheck2(userVO uv, Model model, HttpServletRequest request) {
-
+		//세션 값 갖고 오기
 		HttpSession session = request.getSession();
-
+		
+		//폰 번호와 비번 갖고 오기
 		String LoginPH1 = uv.getPhone();
 		String LoginPW = uv.getPassword();
+		
 		// 아이디나 비번이 비어 있을시
 		if (LoginPH1.equals("") || LoginPW.equals("")) {
 			System.out.println("nullid, nullpw");
@@ -70,7 +73,7 @@ public class UserController {
 					if (LoginPH3.isWithdrawal() == true) {
 						return 4;
 					} else {
-
+						//세션 추가 및 정상 로그인
 						session.setAttribute("session_phone", uv.getPhone());
 						session.setAttribute("session_password", uv.getPassword());
 						session.setAttribute("session_email", uv.getEmail());
