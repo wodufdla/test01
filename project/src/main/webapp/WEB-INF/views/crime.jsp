@@ -24,7 +24,7 @@
             </div>
         </div>
     </nav>
-
+   <jsp:include page="common/header.jsp" />
 	<section id="intro"><img src="/resources/img/intro.png" style="height: 700px";></section>
     
     <footer class="footer" style="background: #994647;">

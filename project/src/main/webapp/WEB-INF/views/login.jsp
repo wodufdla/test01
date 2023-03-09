@@ -24,7 +24,7 @@
 	          	<span class="normal-font" style="display: block;padding: 8px;">Phone</span>
 	          </li>
 	          <li style="display: flex;width: 100%;">
-	          	<input type="text" id="phone" name="phone" placeholder="'-' 제외하고 번호만 입력" maxlength="11" style="width: 100%; padding: 5px;">
+	          	<input type="text" id="phone" name="phone" onkeyup="if(window.event.keyCode==13){request();}" placeholder="'-' 제외하고 번호만 입력" maxlength="11" style="width: 100%; padding: 5px;">
 	          </li>
 	      </ul>
 	      <ul style="padding: 0;display: flex;">
@@ -32,24 +32,38 @@
 	          	<span class="normal-font" style="display: block;padding: 8px;">Password</span>
 	          </li>
 	          <li style="width: 100%;display: flex;">
-	          	<input type="password" id="password" name="password" placeholder="비밀번호 입력" maxlength="20" style="width: 100%; padding: 5px;">
+	          	<input type="password" id="password" name="password" onkeyup="if(window.event.keyCode==13){confirm();}" placeholder="비밀번호 입력"  maxlength="24" style="width: 100%; padding: 5px;">
 	          </li>
 	      </ul>
+		<input type="submit" value="login">
 		</div>
 	</form>
-	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="/assets/js/bootstrap.min.js"></script>
-	<script src="/assets/js/script.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function(){
-			var result = $('#alert').val();
-			if(result == 'success'){
-				alert('로그인 성공');
-			} else if(result == 'fail') {
-				alert('핸드폰번호와 비밀번호를 확인해주세요.');
-			}
-		});	
+	var phone = "";
+	var regPhone= /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+	
+	$("#phone").focus();
+	
+	function request() {
+		if (regPhone.test($("#phone").val()) !== true) {
+	      alert("핸드폰번호를 확인해주세요.");
+	      return;
+	    } else {
+	    	phone = $("#phone").val();
+	        $("#password").focus();
+	    }
+	}
+
+	function confirm() {
+	    if ($("#password").val() < 12 && $("#password").val() < 20) {
+	        alert("비밀번호는 12 ~ 20 까지 입니다.");
+	        return;
+	    } else if ($("#password").val()) {
+	        alert("로그인이 완료되었습니다.");
+	        window.close();
+	    }
+	}
+
 	</script>
 </body>
 </html>
