@@ -19,12 +19,20 @@
 		
 		//로그인 시작
 		$("#ulogin").click(function() {
-			 $.ajax({
+			
+			var ph1 = $("#input-phone").val();
+			var pw1 = $("#input-certificate").val();
+			
+			//alert("ph1:"+ph1);
+			//alert("pw1:"+pw1);
+			
+			//ajax start
+/*  			 $.ajax({
 	     		 url:"./loginCheck",
 	     		 type:"post",
 	     		 data:{
-	     			 "phone":$("#uphone").val(),
-	     			 "password":$("#upw").val()
+	     			 "phone":ph1,
+	     			 "password":pw1
 	     		 },
 	     		 success:function(data){
 	     			 if(data==0){
@@ -45,6 +53,27 @@
 		     			 location.href="./exception?code="+request.status+"&message="+request.statusText+"&error="+error;
 		     		 }
 	     	  });
+ 			 //ajax end */
+ 			 
+			//ajax start
+ 			 $.ajax({
+	     		 url:"./loginCheck2",
+	     		 type:"post",
+	     		 data:{
+	     			 "phone":ph1,
+	     			 "password":pw1
+	     		 },
+	     		 success:function(data){
+					alert("number:"+data);
+	     		 },
+	     		 error:function(request, status, error){
+		     			alert("code:"+request.status+"\n"+"message:"+request.statusText+"\n"+"error:"+error);
+		     			 location.href="./exception?code="+request.status+"&message="+request.statusText+"&error="+error;
+		     		 }
+	     	  });
+ 			 //ajax end
+ 			 
+ 			 
 		});
 		//로그인 끝
 		
@@ -60,14 +89,14 @@
 	<span style="background-color: #1a374f;font-weight: bold;font-size: 20px;line-height: 50px;text-align: center;width: 100%;display: block;height: 50px;color: #fff;box-shadow: 0px 5px 10px 0px #aaaa;">전화번호 간편 로그인</span>
 	<div style="width: 90%;margin: auto;padding: 20px 0;font-size: 13px;">
       <ul style="padding: 0;display: flex;">
-          <li style="width: 40%;max-width: 100px;" id="uphone"><span class="normal-font" style="display: block;padding: 8px;">전화번호</span></li>
+          <li style="width: 40%;max-width: 100px;" ><span class="normal-font" style="display: block;padding: 8px;">전화번호</span></li>
           
            <li style="display: flex;width: 100%;"><input type="tel" id="input-phone" placeholder="'-' 제외하고 번호만 입력" onkeypress="return paternNumber(event)" maxlength="11" oninput="onInput(this)" onkeyup="if(window.event.keyCode==13){request();}" style="width: 100%;padding: 5px;"></li> 
            <!-- <li style="display: flex;width: 100%;"><input type="tel" id="input-phone" placeholder="'-' 제외하고 번호만 입력" onkeypress="return paternNumber(event)" maxlength="11" oninput="onInput(this)" onkeyup="if(window.event.keyCode==13){request();}" style="width: 100%;padding: 5px;"><a id="a-request" href="javascript:request();" style="display: block;background-color: #b5b9bc;color: #fff;width: 100px;font-size: 12px;line-height: 40px;text-align: center;">인증요청</a></li>  -->
           
       </ul>
       <ul style="padding: 0;display: flex;">
-          <li style="width: 40%;max-width: 100px;" id="upw"><span class="normal-font" style="display: block;padding: 8px;">비밀번호</span></li>
+          <li style="width: 40%;max-width: 100px;" ><span class="normal-font" style="display: block;padding: 8px;">비밀번호</span></li>
           
           <li style="width: 100%;display: flex;"><input type="password" id="input-certificate" placeholder="비밀번호 입력" onkeypress="return paternNumber(event)" maxlength="4" oninput="onInput(this)" onkeyup="if(window.event.keyCode==13){confirm();}"style="width: 100%;padding: 5px;"></li>
           <!-- <li style="width: 100%;display: flex;"><input type="tel" id="input-certificate" placeholder="인증번호 4자리 입력" onkeypress="return paternNumber(event)" maxlength="4" oninput="onInput(this)" onkeyup="if(window.event.keyCode==13){confirm();}"style="width: 100%;padding: 5px;"><a id="a-confirm" href="javascript:confirm();" style="display: block;background-color: #b5b9bc;color: #fff;width: 100px;font-size: 12px;line-height: 40px;text-align: center;">인증확인</a></li> -->

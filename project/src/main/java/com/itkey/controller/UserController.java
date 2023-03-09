@@ -23,6 +23,7 @@ import com.itkey.vo.userVO;
 /**
  * Handles requests for the application home page.
  */
+
 @Controller
 public class UserController {
 	
@@ -40,7 +41,7 @@ public class UserController {
 	//로그인 기능
 	//로그인 화면 접속
 	@ResponseBody
-	@PostMapping("/loginCheck")
+	@RequestMapping("/loginCheck2")
 	public int loginCheck2(userVO uv, Model model, HttpServletRequest request) {
 		//세션 값 갖고 오기
 		HttpSession session = request.getSession();
@@ -48,6 +49,9 @@ public class UserController {
 		//폰 번호와 비번 갖고 오기
 		String LoginPH1 = uv.getPhone();
 		String LoginPW = uv.getPassword();
+		
+		System.out.println("LoginPh1:"+LoginPH1);
+		System.out.println("LoginPw1:"+LoginPW);
 		
 		// 아이디나 비번이 비어 있을시
 		if (LoginPH1.equals("") || LoginPW.equals("")) {
