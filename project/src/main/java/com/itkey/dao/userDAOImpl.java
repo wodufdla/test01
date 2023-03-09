@@ -13,7 +13,7 @@ import com.itkey.vo.userVO;
 @Repository
 public class userDAOImpl implements userDAO {
 	private static final Logger log = LoggerFactory.getLogger(userDAOImpl.class);
-	private static final String NAMESPACE = "UserMapper";
+	private static final String NAMESPACE = "userMapper";
 	
 	@Autowired
 	private SqlSession sqlSession;
