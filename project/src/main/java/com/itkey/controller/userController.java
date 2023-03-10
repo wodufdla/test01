@@ -35,7 +35,6 @@ public class userController {
 	@PostMapping("/login")
 	public String loginPOST(String phone, String password, HttpServletRequest request, RedirectAttributes reAttr) {
 		log.info("loginPOST() 호출");
-		
 		userVO vo = userService.read_login(phone);
 		
 		if (vo == null) {
@@ -56,4 +55,13 @@ public class userController {
 			}
 		}
 	}
+	
+    //로그out 화면 접속 황선필
+    @RequestMapping("/logout")
+    public String logOut(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        session.invalidate();
+        return "redirect:/";
+    }
+	
 }

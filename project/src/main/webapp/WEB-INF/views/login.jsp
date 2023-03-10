@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -77,6 +78,8 @@
 		console.log(result)
 		if(result == 'successLogin'){
 			alert('로그인 성공 !')
+			//연창 새로고침 황선필
+			opener.location.reload();
 			window.close();
 		} else if (result == 'fail') {
 			alert('존재하지 않는 회원입니다. 핸드폰번호를 확인해주세요. ')
