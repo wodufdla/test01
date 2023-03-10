@@ -13,7 +13,7 @@ import com.itkey.vo.userVO;
 @Repository
 public class userDAOImpl implements userDAO {
 	private static final Logger log = LoggerFactory.getLogger(userDAOImpl.class);
-	private static final String NAMESPACE = "userMapper";
+	private static final String NAMESPACE = "com.itkey.UserMapper";
 	
 	@Autowired
 	private SqlSession sqlSession;
@@ -43,8 +43,8 @@ public class userDAOImpl implements userDAO {
 	}
 
 	@Override
-	public userVO select_by_phone(String phone) {
-		log.info("select_by_phone() 호출");
-		return sqlSession.selectOne(NAMESPACE + ".select_by_phone", phone);
+	public userVO select_login(String phone) {
+		log.info("select_login() 호출");
+		return sqlSession.selectOne(NAMESPACE + ".select_login", phone);
 	}
 }

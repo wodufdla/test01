@@ -42,9 +42,9 @@ public class userServiceImpl implements userService {
 	}
 
 	@Override
-	public userVO read_by_phone(String phone) {
-		log.info("read_by_phone() 호출 : phone = " + phone);
-		return userDAO.select_by_phone(phone);
+	public userVO read_login(String phone) {
+		log.info("read_login() 호출 : phone = " + phone);
+		return userDAO.select_login(phone);
 	}
 	
 	

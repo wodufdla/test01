@@ -2,32 +2,32 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="userMapper">
+<mapper namespace="com.itkey.UserMapper">
 
 	<select id="select_all" resultType="userVO">
-		select * from ${user}
-		order by ${joinDate}
+		select * from ${user_tbl}
+		order by ${join_date}
 	</select>
 	
 	<insert id="insert">
-		insert into ${user} (${phone}, ${password}, ${email})
+		insert into ${user_tbl} (${phone}, ${password}, ${email})
 		values (#{phone}, #{password}, #{email})
 	</insert>
 	
 	<update id="update">
-		update ${user}
+		update ${user_tbl}
 		set ${password} = #{password}, ${email} = #{email}
 		where ${phone} = #{phone}
 	</update>
 	
 	<update id="delete">
-		update ${user}
+		update ${user_tbl}
 		set ${withdrawal} = #{withdrawal}
 		where ${phone} = #{phone}
 	</update>
 	
-	<select id="select_by_phone" resultType="userVO">
-		select * from ${user}
+	<select id="select_login" resultType="userVO">
+		select * from ${user_tbl}
 		where ${phone} = #{phone}
 	</select>
 	

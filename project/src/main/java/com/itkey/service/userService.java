@@ -9,5 +9,5 @@ public interface userService {
 	int create(userVO vo);
 	int update(userVO vo);
 	int delete(userVO vo);
-	userVO read_by_phone(String phone);
+	userVO read_login(String phone);
 }

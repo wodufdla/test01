@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,17 +36,24 @@ public class userController {
 	public String loginPOST(String phone, String password, HttpServletRequest request, RedirectAttributes reAttr) {
 		log.info("loginPOST() 호출");
 		
-		userVO vo = userService.read_by_phone(phone);
-		log.info("000000000000 vo = " + vo);
+		userVO vo = userService.read_login(phone);
 		
 		if (vo == null) {
 			reAttr.addFlashAttribute("login_result", "fail");
-			log.info("11111111111111");
 			return "redirect:/login";
 		} else {
-			reAttr.addFlashAttribute("login_result", "success");
-			log.info("222222222222222");
-			return "redirect:/login";
+			String userPhone = vo.getPhone();
+			String userPassword = vo.getPassword();
+			if(userPhone.equals(phone) && userPassword.equals(password)) {
+				log.info("로그인성공");
+				HttpSession session = request.getSession();
+				session.setAttribute("phone", phone);
+				reAttr.addFlashAttribute("login_result", "successLogin");
+				return "redirect:/login";
+			} else {
+				reAttr.addFlashAttribute("login_result", "failLogin");
+				return "redirect:/login";
+			}
 		}
 	}
 }

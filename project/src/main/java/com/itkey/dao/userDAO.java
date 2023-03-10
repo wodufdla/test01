@@ -9,5 +9,5 @@ public interface userDAO {
 	int insert(userVO vo);
 	int update(userVO vo);
 	int delete(userVO vo);
-	userVO select_by_phone(String phone);
+	userVO select_login(String phone);
 }

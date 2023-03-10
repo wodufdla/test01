@@ -4,11 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<properties>
-		<property name="user" value="user" />
+		<property name="user_tbl" value="user_tbl" />
 		<property name="phone" value="phone" />
 		<property name="password" value="password" />
 		<property name="email" value="email" />
-		<property name="joinDate" value="join_date" />
+		<property name="join_date" value="join_date" />
 		<property name="withdrawal" value="withdrawal" />
 	</properties>
 
