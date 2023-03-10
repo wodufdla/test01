@@ -45,6 +45,6 @@ public class userDAOImpl implements userDAO {
 	@Override
 	public userVO select_by_phone(String phone) {
 		log.info("select_by_phone() 호출");
-		return sqlSession.selectOne(NAMESPACE + ".select_by_phone", phone);
+		return sqlSession.selectOne(NAMESPACE +".select_by_phone", phone);
 	}
 }
